@@ -1,0 +1,61 @@
+
+/* 
+    Created on : 07/03/2019, 09:14:03
+    Author     : kyomei
+*/
+
+.equipe-descricao {
+    position: relative;
+    a.icon-quit {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        color: teal;
+        &:hover {
+            color: white !important;
+        }
+    }
+    .icon-edit {
+        color: teal;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: -20px;
+    }
+}
+.card-equipe .card-box {
+    color: #ddd;
+}
+.member-card {
+    position: relative;
+    .icon-edit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: teal;
+        cursor: pointer;
+    }
+}
+.history-equipe {
+    .card-history {
+        padding: 0;
+    }
+    .card-history-title {
+        padding: 10px 20px;
+        background-color: #E2E2E2;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .card-history-body {
+        background-color: #FFF;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        table td {
+            font-size: 12px;
+            img {
+                //border: 1px solid #000;
+                //border-radius: 50%;
+            }
+        }
+    }
+}

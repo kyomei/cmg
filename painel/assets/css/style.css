@@ -1,7 +1,131 @@
 /* 
-    Created on : 12/03/2019, 17:58:13
+    Created on : 07/03/2019, 09:13:28
     Author     : kyomei
-    Project    : style painel
 */
+/* 
+    Created on : 11/03/2019, 10:48:56
+    Author     : kyomei
+*/
+.text-xs {
+  font-size: .7rem; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.border-left-primary {
+  border-left: 0.25rem solid #4e73df !important; }
+
+.card-box {
+  padding: 20px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.06), 0 2px 0 0 rgba(0, 0, 0, 0.02);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-clip: padding-box;
+  margin-bottom: 20px;
+  background-color: #ffffff; }
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* 
+    Created on : 11/03/2019, 13:39:41
+    Author     : kyomei
+*/
+/* 
+    Created on : 11/03/2019, 11:01:10
+    Author     : kyomei
+*/
+.navbar .dropdown {
+  padding-right: 0px;
+  padding-left: 0px; }
+.navbar .topbar-divider {
+  width: 0;
+  border-right: 1px solid #e3e6f0;
+  height: calc(4.375rem - 2rem);
+  margin: auto 1rem; }
+.navbar .nav-item .dropdown-toggle::after {
+  display: none; }
+.navbar .nav-item .nav-link .badge {
+  position: absolute;
+  margin-left: 0.75rem;
+  top: 0.3rem;
+  font-weight: 400;
+  font-size: 0.5rem; }
+.navbar .nav-item .dropdown-list {
+  width: 20rem !important;
+  padding: 0; }
+  .navbar .nav-item .dropdown-list .dropdown-header {
+    background-color: #4e73df;
+    border: 1px solid #4e73df;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: #fff; }
+  .navbar .nav-item .dropdown-list .dropdown-item {
+    white-space: normal;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-left: 1px solid #e3e6f0;
+    border-right: 1px solid #e3e6f0;
+    border-bottom: 1px solid #e3e6f0;
+    line-height: 1.3rem; }
+
+.nav-item .nav-link .img-profile, .topbar .nav-item .nav-link .img-profile {
+  height: 2rem;
+  width: 2rem; }
+
+/* 
+    Created on : 07/03/2019, 09:14:03
+    Author     : kyomei
+*/
+.dashboard .card-box {
+  padding: 10px; }
+
+/* 
+    Created on : 07/03/2019, 09:14:03
+    Author     : kyomei
+*/
+.equipe-descricao {
+  position: relative; }
+  .equipe-descricao a.icon-quit {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: teal; }
+    .equipe-descricao a.icon-quit:hover {
+      color: white !important; }
+  .equipe-descricao .icon-edit {
+    color: teal;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: -20px; }
+
+.card-equipe .card-box {
+  color: #ddd; }
+
+.member-card {
+  position: relative; }
+  .member-card .icon-edit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: teal;
+    cursor: pointer; }
+
+.history-equipe .card-history {
+  padding: 0; }
+.history-equipe .card-history-title {
+  padding: 10px 20px;
+  background-color: #E2E2E2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+.history-equipe .card-history-body {
+  background-color: #FFF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+  .history-equipe .card-history-body table td {
+    font-size: 12px; }
 
 /*# sourceMappingURL=style.css.map */
