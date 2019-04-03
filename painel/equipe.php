@@ -90,7 +90,7 @@ function teste_input($data) {
                                 <?php if (!empty($logado->getImage())): ?>
                                     <img src="<?= $logado->getImage(); ?>" class="rounded-circle img-thumbnail" alt="profile-image" width="150">
                                 <?php else: ?>
-                                    <img src="../assets/images/painel/profile-default.png" class="rounded-circle img-thumbnail" alt="profile-image" width="150">
+                                    <img src="../assets/images/players/default.png" class="rounded-circle img-thumbnail" alt="profile-image" width="150">
                                 <?php endif; ?>
                                 <h4><?= $logado->getNick(); ?></h4>
                                 <p class="text-muted"><?= $logado->getNome(); ?></p>
@@ -318,7 +318,7 @@ function teste_input($data) {
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="card-box border-left-primary cursor-pointer">
+                                        <div class="card-box border-left-primary cursor-pointer" data-toggle="modal" data-target="#apply">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col">
@@ -480,40 +480,42 @@ function teste_input($data) {
         </div>
     </div>
 </div>
-<?php if($logado->equipe->getLider() == $logado->getId()){?>
-<!-- The Modal - Edit profile equipe -->
-<div class="modal fade" id="myProfileEquipe">
-    <div class="modal-dialog modal-lg">        
-        <form role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Dados da equipe</h4>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                </div>
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <!-- Campo nome -->
-                    <div class="form-group col-sm-4 col-xs-6">
-                        <label for="nome">Nome</label>
-                        <input type="text" value="<?= $logado->equipe->getNome(); ?>" name="nome" class="form-control" required="required">
+<?php if(!empty($logado->equipe)) { ?>
+    <?php if($logado->equipe->getLider() == $logado->getId()){?>
+    <!-- The Modal - Edit profile equipe -->
+    <div class="modal fade" id="myProfileEquipe">
+        <div class="modal-dialog modal-lg">        
+            <form role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Dados da equipe</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
-                    <!-- Campo nick do jogador -->
-                    <div class="form-group col-sm-12 col-xs-12">	
-                        <label for="descricao">Descrição</label>
-                        <textarea cols="5" rows="5" name="descricao" class="form-control"><?=$logado->equipe->getDescricao();?></textarea>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!-- Campo nome -->
+                        <div class="form-group col-sm-4 col-xs-6">
+                            <label for="nome">Nome</label>
+                            <input type="text" value="<?= $logado->equipe->getNome(); ?>" name="nome" class="form-control" required="required">
+                        </div>
+                        <!-- Campo nick do jogador -->
+                        <div class="form-group col-sm-12 col-xs-12">	
+                            <label for="descricao">Descrição</label>
+                            <textarea cols="5" rows="5" name="descricao" class="form-control"><?=$logado->equipe->getDescricao();?></textarea>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input class="btn btn-danger" type="submit" value="Atualizar">
                     </div>
                 </div>
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <input class="btn btn-danger" type="submit" value="Atualizar">
-                </div>
-            </div>
 
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-<!-- End .\ The Modal - Edit profile equipe -->
+    <!-- End .\ The Modal - Edit profile equipe -->
+    <?php } ?>
 <?php } ?>
 
 <!-- The Modal - Edit profile user -->
@@ -586,6 +588,35 @@ function teste_input($data) {
     </div>
 </div>
 
+<!-- The Modal - Apply -->
+<div class="modal fade" id="apply">
+    <div class="modal-dialog modal-lg">        
+        <form role="form" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Solicitações</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row">
+                       <?php 
+                                   var_dump($equipeApply->getApply($id_usuario))
+                       ?>
+                        
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <input class="btn btn-danger" type="submit" value="Atualizar">
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- End .\ The Modal - Apply  -->
 
 <!-- The Modal - Show membros da equipe -->
 <div class="modal fade" id="showMembrosEquipe">
@@ -600,7 +631,13 @@ function teste_input($data) {
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="row">
-                        
+                        <table class="table table-striped">
+                            <tr>
+                                <td>tese</td>
+                                <td>tese</td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <!-- Modal footer -->

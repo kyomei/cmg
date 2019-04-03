@@ -1,0 +1,114 @@
+/* 
+    Created on : 06/04/2019, 13:31:07
+    Author     : kyomei
+    Projetec   : style login page
+*/
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #124155;
+    font-family: "Segoe UI";
+}
+a {
+	text-decoration: none;
+}
+h1 {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font-weight: 500;
+}
+form {
+    background-color: #FFFFFF;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+
+    a {
+    	color: #0056b3;
+
+    	&:hover {
+    		color: #003e80;
+    		text-decoration: underline;
+    	}
+	}
+
+
+    input {
+	    width: 100%;
+	    height: 40px;
+	    display: block;
+	    border-radius: 4px;
+	    margin-bottom: 20px;
+	    font-size: inherit;
+	    padding: 5px;
+	    border: 2px solid #D4D4D4;
+	    background-color: #E8F0FD;
+	   /*
+	    transition-property: border-color;
+	    transition-duration: 1s;
+	    transition-timing-function: linear;*/
+
+	    &:hover {
+	    	border: 2px solid #8c8c8c;
+	    	transition: all 1s ease-out;
+		}
+		&:focus {
+    		outline: 0;
+		}
+	}
+
+	input[type=submit] {
+	    border: none;
+	    color: white;
+	    margin-bottom: 10px;
+	    margin-top: 45px;
+	    cursor: pointer;
+	    background-color: #25799E;
+	    font-weight: 500;
+	    font-size: 16px;
+
+	    &:hover {
+		    background-color: #185067;
+		}
+	}
+
+	label {
+	    margin: 0;
+	    display: block;
+	    color: #858585;
+	}
+}
+
+
+
+.form-info {
+    color: white;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h2 {
+	    text-align: center;
+	    font-size: 24px;
+	    font-weight: 500;
+	}
+	.btn {
+		border-radius: 5px;
+		text-align: center;
+		padding: 10px;
+	    display: block;
+	    background-color: #008001;
+
+	    &:hover {
+	    	color: white;
+	    	background-color: #006600;
+		}
+	}
+
+}
+

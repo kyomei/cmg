@@ -37,7 +37,7 @@ class EquipeApply {
             return false;
         }
     }
-    /* Busca uma registro no banco de dados */
+    /* Busca um registro no banco de dados */
     public function getApply($id_usuario) {
         
         $sql = "SELECT * FROM $this->table WHERE usuario = :id_usuario";
