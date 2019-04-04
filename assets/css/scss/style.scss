@@ -1,7 +1,139 @@
 /* 
-    Created on : 12/03/2019, 18:00:07
-    Author     : kyomei
+    Created on : 04/04/2019, 10:59:41
+    Author     : Rafael Jeferson
     Projetec   : style website
 */
 
-body { background: red !important;}
+@import "variables.scss";
+@import "components.scss";
+
+* {
+	box-sizing: border-box;
+}
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ } 
+ .container {
+ 	width: 1140px;
+ }
+ #line-header {
+ 	color: white;
+ 	font-family: $segoe;
+ 	display: flex;
+ 	justify-content: center;
+ 	background-color: $bt-dark;	
+
+ 	.line-container {	 
+ 		height: 40px;	
+	 	display: flex;
+	 	justify-content: space-between;
+
+	 	.redes-sociais {
+	 		display: flex;
+	 		align-items: center;
+	 	}
+	 	.login {
+	 		display: flex;
+	 		align-items: center;
+	 	}
+ 	}
+
+ }
+#menu {
+	font-family: $segoe;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	background-color: $dark;	
+	border-bottom: 2px solid $primary;
+
+	.brand-nav {
+		position: absolute;
+		left: 50%;
+		margin-left: -50px;
+		margin-top: 10px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		height: 95px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		li a {
+			color: $white-light;
+			margin: 0 15px;
+			text-decoration: none;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+		li:nth-child(3) {
+			margin-right: 200px;
+		}
+	}
+}
+
+#carousel {
+	height: 350px;
+	background-color: $bt-success;
+}
+
+#partidas-destaque {	
+ 	display: flex;
+ 	justify-content: center;
+ 	background-color: #242431;
+ 	border-bottom: 2px solid $primary;
+ 	font-family: $segoe;
+ 	padding-bottom: 10px;
+
+ 	h1 {
+ 		font-size: 24px;
+ 		color: $primary;
+ 	}
+ 	h2 {
+	 	margin: 0;
+	 	font-size: 16px;
+	 	line-height: 16px;
+ 		
+ 	}
+ 	a { 			
+ 		text-decoration: none;
+	 	color: $white-light;
+
+	 	&:hover {
+	 		color: $primary;
+	 	}
+ 	}
+
+ 	.col:first-child {
+ 		margin-left: 0px;
+ 	}
+ 	.col {
+ 		margin-left: 15px;
+ 	}
+}
+
+#footer {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	color: $white;
+	font-family: 'Segoe UI';
+	background-color: $bt-dark;
+
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		color: $primary;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

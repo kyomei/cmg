@@ -10,15 +10,21 @@ body {
     background-color: #124155;
     font-family: "Segoe UI";
 }
-a {
-	text-decoration: none;
-}
+a {	text-decoration: none; }
+.hidden { display: none;}
+
 h1 {
     font-size: 28px;
     color: white;
     text-align: center;
     margin: 40px 0 30px 0;
     font-weight: 500;
+}
+.container {
+	background-color: #FFFFFF;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
 }
 form {
     background-color: #FFFFFF;
@@ -112,3 +118,18 @@ form {
 
 }
 
+.form-reset {
+	.container {
+		border-left: 5px solid #2da1d2;
+		margin-bottom: 10px;
+		border-radius: 5px;
+
+		p { color: #2da1d2;}
+		input[type=submit] {
+			margin-top: 10px;
+			width: auto;
+			font-size: 14px;
+			padding: 0px 10px;
+		}
+	}
+}

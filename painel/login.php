@@ -24,7 +24,7 @@ if(!empty($_SESSION['login'])){
     <body>
 
         <h1>Crossfire Ghost Mode</h1>
-        <form action="" method="POST">
+        <form method="POST" id="form-login">
             <?php
                 require_once 'classes/Usuario.class.php';
                 $user = new Usuario();
@@ -50,11 +50,31 @@ if(!empty($_SESSION['login'])){
             <label for="senha">Senha</label>
             <input type="password" name="senha" />
             <input type="submit" value="Entrar" />
-            <a href="#">Esqueceu a senha?</a>
+            <a href="#" id="reset-senha">Esqueceu a senha?</a>
         </form>
-        <div class="form-info">
+        <div class="form-info" id="create-account">
             <h2>Crie sua conta gratuitamente</h2>
             <a href="#" class="form-info btn">Criar conta</a>
         </div>
+
+        <div class="form-reset hidden">
+            <div class="reset-info">
+                <div class="container">
+                    <p>Digite seu endereço de e-mail. Você receberá um link para criar uma nova senha via e-mail.</p>
+                </div>
+            </div>
+            <div class="reset-form">
+                <div class="container">
+                    <form method="GET">
+                        <label for="email">Endereço de e-mail</label>
+                        <input type="email" name="email" />
+                        <input type="submit" value="Obter nova senha" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/script-login.js"></script>
     </body>
 </html>
