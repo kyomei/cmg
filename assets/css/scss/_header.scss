@@ -1,0 +1,52 @@
+
+ // Linha do topo
+ #line-header {
+ 	color: white;
+ 	font-family: $segoe-semibold;
+ 	display: flex;
+ 	justify-content: center;
+ 	background-color: $bt-dark;	
+
+ 	// Definição dos elementos da linha (tamanho da linha, posicao de alinhamento)
+ 	.line-container {	 
+ 		height: 40px;	
+	 	display: flex;
+	 	justify-content: space-between;
+
+	 	// Estilo para os links da lina
+	 	a {
+	 		color: $white;
+	 		text-decoration: none;
+	 	}
+	 	// Estilo para icones de redes sociais
+	 	.redes-sociais  {
+	 		display: flex;
+	 		align-items: center;
+	 		// Tamanho dos icones e alinhamento
+	 		i {
+	 			height: 40px;
+	 			width: 34px;
+	 			//padding: 0px 5px;
+	 			line-height: 40px;
+	 			text-align: center;
+	 			&:hover {
+	 				//color: $primary;
+ 					background-color: $dark;
+	 			}
+	 		}
+	 	}
+	 	// Estilo para btn de logar no sistema
+	 	.login {
+	 		display: flex;
+	 		align-items: center;
+	 		padding: 0px 10px;
+	 		
+	 		// Efeito hover no btn inicia sessão
+	 		&:hover {
+	 			//color: $primary;
+	 			background-color: $dark;
+	 		}
+	 	}
+ 	}
+
+ }

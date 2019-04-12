@@ -1,0 +1,20 @@
+
+// Definição para rodape da pagina
+#footer {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	color: $white;
+	font-family: $segoe;
+	background-color: $bt-dark;
+
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		color: $primary;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

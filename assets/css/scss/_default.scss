@@ -1,0 +1,71 @@
+// Configurações padrão
+* {
+	box-sizing: border-box;
+}
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ } 
+ .container {
+ 	width: 1140px;
+ }
+
+// Definições de sessão
+ .section {	
+ 	display: flex;
+ 	justify-content: center;
+ 	background-color: #242431;
+ 	border-bottom: 2px solid $primary;
+ 	font-family: $segoe-semibold;
+ 	padding-bottom: 10px;
+
+ 	h1 {
+ 		font-size: 24px;
+ 		color: $primary;
+ 	}
+ 	h2 {
+	 	margin: 0;
+	 	font-size: 16px;
+	 	line-height: 16px;
+ 		
+ 	}
+ 	a { 			
+ 		text-decoration: none;
+	 	color: $white-light;
+
+	 	&:hover {
+	 		color: $primary;
+	 	}
+ 	}
+
+ 	.col:first-child {
+ 		margin-left: 0px;
+ 	}
+ 	.col {
+ 		margin-left: 15px;
+ 	}
+
+}
+
+// Sessão title page
+.title-page {
+	max-height: 190px;
+	height: 190px;
+	width: 100%;
+	background-image: url('../../assets/images/template/header_partidas.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;	
+	border-bottom: 2px solid $primary;
+
+	h1 {
+		font-family: $segoe-semibold;
+		font-size: 36px;
+		margin: 0;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 190px;
+		color: $white-light;
+		text-shadow: 0 0 4px $primary;
+	}
+}

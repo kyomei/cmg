@@ -1,0 +1,42 @@
+
+// Estilo para navbar principal
+#menu {
+	font-family: $segoe-semibold;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	background-color: $dark;	
+	border-bottom: 2px solid $primary;
+
+	.brand-nav {
+		position: absolute;
+		left: 50%;
+		margin-left: -50px;
+		margin-top: 10px;
+	}
+
+	// Estilo para itens do menu
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		height: 95px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		li a {
+			color: $white-light;
+			margin: 0 15px;
+			text-decoration: none;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+		// Espaço para logo
+		li:nth-child(3) {
+			margin-right: 200px;
+		}
+	}
+}

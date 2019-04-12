@@ -6,11 +6,16 @@
 
 .d-none { display: none; }
 .d-flex { display: flex; }
-.img-responsive { width: 100%; }
 .rounded-circle { border-radius: 50%!important;}
-.img-thumbnail { padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem; max-width: 100%;height: auto;}
+
+// Alinhamento de elementos
+.text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
+
+// Image 
+.img-responsive { width: 100%; }
+.img-thumbnail { padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem; max-width: 100%;height: auto;}
 
 // Font size
 .fs-1 { font-size: 12px; }

@@ -1,0 +1,51 @@
+/* Page jogadores.php
+ * Definição da pagina jogadores.php
+ * Autor: Rafael Jeferson
+ * Data: 14.04.2019 - 16:07;
+ */
+
+
+#area-jogadores {
+
+	// Estilo da table
+	table {
+		width: 100%;
+		border-spacing: 0px;
+		// Estilo para primeira linha da tabela
+		thead {
+			color: $white-light;
+			tr {
+				background-color: #0054A5;
+			}
+			td {
+				text-transform: uppercase;
+    			border-bottom: 2px solid $primary;
+				padding: 1.15rem .75rem;
+			}
+		}
+		tbody {
+			// Definição para todas as td do corpo da tabela
+			td {
+				font-family: $segoe;
+				color: $white-light;
+				padding: 0.55rem .75rem;
+    			border-bottom: 1px solid #dee2e6;
+    			// Definição da imagem da tabela
+    			img {
+    				max-width: 40px;
+				    max-height: 40px;
+				    width: 40px;
+				    height: 40px;
+    			}
+			}
+			// Remove border na ultima linha da tabela
+			tr:nth-last-child(1) td {
+				border-bottom: none;
+			}
+			// Efeito hover nas linhas da tabela
+			tr:hover {
+				background: #303740;
+			}
+		}
+	}
+}
