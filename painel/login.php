@@ -17,59 +17,64 @@ if(!empty($_SESSION['login'])){
 
         <title>Login - Crossfire Ghost Mode</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Custom styles for this template -->
-        <link href="https://getbootstrap.com/docs/4.0/examples/floating-labels/floating-labels.css" rel="stylesheet">
+        <link href="./assets/css/login.css" rel="stylesheet">
     </head>
 
     <body>
-        <?php
-        require_once 'classes/Usuario.class.php';
-        $user = new Usuario();
-        if (isset($_POST['email']) && !empty($_POST['email'])) {
-            if (isset($_POST['senha']) && !empty($_POST['senha'])) {
-                $email = addslashes($_POST['email']);
-                $senha = $_POST['senha'];
-                if ($user->login($email, $senha)):
-                    header("Location: index.php");
-                else:
-                    ?>
-        
-                    <div class="alert alert-danger" role="alert">
-                        Usuário e/ou Senha inválidos!
-                    </div>
-                <?php
-                endif;
-            }
-        }
-        ?>
-        <form class="form-signin" method="POST">
-            <div class="text-center mb-4">
-                <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 font-weight-normal">Acesse sua conta!</h1>
-                <p class="text-left">Preencha as informações abaixo:</p>
-            </div>
 
-            <div class="form-label-group">
-                <input type="email" id="email" class="form-control" placeholder="Email address" name="email" required autofocus>
-                <label for="email">Email address</label>
-            </div>
-
-            <div class="form-label-group">
-                <input type="password" id="senha" class="form-control" placeholder="Password" name="senha" required>
-                <label for="senha">Senha address</label>
-            </div>
-
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Lembrar-me
-                </label>
-                <a href="register.php">Criar conta</a>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-            <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+        <h1>Crossfire Ghost Mode</h1>
+        <form method="POST" id="form-login">
+            <?php
+                require_once 'classes/Usuario.class.php';
+                $user = new Usuario();
+                if (isset($_POST['email']) && !empty($_POST['email'])) {
+                    if (isset($_POST['senha']) && !empty($_POST['senha'])) {
+                        $email = addslashes($_POST['email']);
+                        $senha = $_POST['senha'];
+                        if ($user->login($email, $senha)):
+                            header("Location: index.php");
+                        else:
+                            ?>
+                
+                            <div class="alert alert-danger" role="alert">
+                                Usuário e/ou Senha inválidos!
+                            </div>
+                        <?php
+                        endif;
+                    }
+                }
+            ?>
+            <label for="email">Email ou telefone</label>
+            <input type="text" name="email" />
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" />
+            <input type="submit" value="Entrar" />
+            <a href="#" id="reset-senha">Esqueceu a senha?</a>
         </form>
+        <div class="form-info" id="create-account">
+            <h2>Crie sua conta gratuitamente</h2>
+            <a href="#" class="form-info btn">Criar conta</a>
+        </div>
+
+        <div class="form-reset hidden">
+            <div class="reset-info">
+                <div class="container">
+                    <p>Digite seu endereço de e-mail. Você receberá um link para criar uma nova senha via e-mail.</p>
+                </div>
+            </div>
+            <div class="reset-form">
+                <div class="container">
+                    <form method="GET">
+                        <label for="email">Endereço de e-mail</label>
+                        <input type="email" name="email" />
+                        <input type="submit" value="Obter nova senha" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/script-login.js"></script>
     </body>
 </html>
