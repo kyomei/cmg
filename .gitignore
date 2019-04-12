@@ -6,3 +6,5 @@ assets/css/*.css.map
 *.txt
 painel/classes/config.php
 >>>>>>> develop
+
+assets/css/scss/.sass-cache/*

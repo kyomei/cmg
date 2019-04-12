@@ -12,14 +12,23 @@
 }
  body {
  	margin: 0;
- 	padding: 0;
+ 	padding: 0; 	
+	font-family: $segoe;
  } 
  .container {
  	width: 1140px;
  }
+ section {
+ 	padding: 20px 0;
+ 	display: flex;
+ 	justify-content: center;
+ }
+ .row {
+ 	display: flex;
+ 	justify-content: flex-start;
+ }
 
 #menu {
-	font-family: $segoe;
 	height: 50px;
 	font-size: 16px;
 	display: flex;	
@@ -50,6 +59,21 @@
 			&:hover {
 				color: $primary;
 			}
+		}
+	}
+}
+
+section#equipe {
+	.card {
+		.icon-edit {
+			display: flex;
+			justify-content: flex-end;
+		}
+		// Centraliza imagem
+		.player-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }

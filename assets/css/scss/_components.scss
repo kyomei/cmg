@@ -7,3 +7,23 @@
 .d-none { display: none; }
 .d-flex { display: flex; }
 .img-responsive { width: 100%; }
+.rounded-circle { border-radius: 50%!important;}
+.img-thumbnail { padding: .25rem;background-color: #fff;border: 1px solid #dee2e6;border-radius: .25rem; max-width: 100%;height: auto;}
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+// Font size
+.fs-1 { font-size: 12px; }
+.fs-2 { font-size: 16px; }
+.fs-3 { font-size: 20px; }
+.fs-4 {	font-size: 24px; }
+
+// Margin left
+.ml-1 { margin-left: 5px; }
+.ml-2 { margin-left: 10px }
+.ml-3 { margin-left: 15px; }
+.ml-4 { margin-left: 20px }
+.ml-5 { margin-left: 25px; }
+.ml-2 { margin-left: 30px }
+
+.card {padding: 20px;box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.06), 0 2px 0 0 rgba(0, 0, 0, 0.02);border-radius: 5px;background-clip: padding-box;margin-bottom: 20px;background-color: #fff;}
