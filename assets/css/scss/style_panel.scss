@@ -1,0 +1,75 @@
+/* 
+    Created on : 04/04/2019, 10:59:41
+    Author     : Rafael Jeferson
+    Projetec   : style website
+*/
+
+@import "variables.scss";
+@import "components.scss";
+
+* {
+	box-sizing: border-box;
+}
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ } 
+ .container {
+ 	width: 1140px;
+ }
+
+#menu {
+	font-family: $segoe;
+	height: 50px;
+	font-size: 16px;
+	display: flex;	
+	justify-content: center;
+	background-color: $dark;	
+	border-bottom: 2px solid $primary;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.brand-nav {
+	}
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li a {
+			color: $white;
+			margin: 0 10px;
+			text-decoration: none;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+
+#footer {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	color: $white;
+	font-family: 'Segoe UI';
+	background-color: $bt-dark;
+
+	a {
+		font-weight: bold;
+		text-decoration: none;
+		color: $primary;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
