@@ -17,6 +17,7 @@
  .container {
  	width: 1140px;
  }
+ // Linha do topo
  #line-header {
  	color: white;
  	font-family: $segoe;
@@ -24,18 +25,42 @@
  	justify-content: center;
  	background-color: $bt-dark;	
 
+ 	// Definição dos elementos da linha (tamanho da linha, posicao de alinhamento)
  	.line-container {	 
  		height: 40px;	
 	 	display: flex;
 	 	justify-content: space-between;
 
-	 	.redes-sociais {
+	 	// Estilo para os links da lina
+	 	a {
+	 		color: $white;
+	 		text-decoration: none;
+	 	}
+	 	// Estilo para icones de redes sociais
+	 	.redes-sociais  {
 	 		display: flex;
 	 		align-items: center;
+
+	 		i {
+	 			height: 40px;
+	 			padding: 0px 5px;
+	 			line-height: 40px;
+	 			&:hover {
+	 				//color: $primary;
+ 					background-color: $dark;
+	 			}
+	 		}
 	 	}
+	 	// Estilo para btn de logar no sistema
 	 	.login {
 	 		display: flex;
 	 		align-items: center;
+	 		padding: 0px 10px;
+
+	 		&:hover {
+	 			//color: $primary;
+	 			background-color: $dark;
+	 		}
 	 	}
  	}
 
@@ -58,7 +83,6 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		display: flex;
 		height: 95px;
 		display: flex;
 		align-items: center;

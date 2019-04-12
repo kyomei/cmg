@@ -10,14 +10,24 @@
 
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
     	<header>
 	        <section id="line-header">
 	        	<div class="container">
 		        	<div class="line-container">
-		        		<div class="redes-sociais">icones aqui</div>
-		        		<div class="login">Iniciar sessão</div>
+		        		<div class="redes-sociais"> 
+		        			<div class="fa-lg">
+			        			<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-youtube"></i></a>
+								<a href="#"><i class="fas fa-envelope"></i></a>
+								<a href="#"><i class="fab fa-whatsapp"></i></a>
+							</div>
+						</div>
+		        		<a href="painel/login.php" class="login">Iniciar sessão</a>
 		        	</div>		        	
 	        	</div>
 	        </section>
@@ -38,7 +48,7 @@
 	    	</nav>
     	</header>
     	<section id="carousel">
-    		
+
     	</section>
     	<section id="partidas-destaque">
     		<div class="container">       			
